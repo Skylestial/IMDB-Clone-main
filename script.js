@@ -1,4 +1,4 @@
-fetch('https://api.themoviedb.org/3/trending/all/day?api_key=ffa9195d30c8bc81c4e08e99757074da')
+fetch('https://api.themoviedb.org/3/trending/all/day?api_key=ada0d47f9e4328dca2b709e48482ff7c')
 .then((response) => response.json())
 .then((response) =>{
     console.log(response);
@@ -16,7 +16,7 @@ document.getElementById("trend"+ i).src = "https://image.tmdb.org/t/p/w200" + re
     console.log(err);
 })
 
-fetch('https://api.themoviedb.org/3/movie/popular?api_key=ffa9195d30c8bc81c4e08e99757074da&language=en-US&page=1')
+fetch('https://api.themoviedb.org/3/movie/popular?api_key=ada0d47f9e4328dca2b709e48482ff7c&language=en-US&page=1')
 .then((response) => response.json())
 .then((response) =>{
     console.log(response);
@@ -60,7 +60,7 @@ poster()
 
 function poster(){
 
-fetch('https://api.themoviedb.org/3/find/'+ localStorage.getItem("currentImdb")+'?api_key=ffa9195d30c8bc81c4e08e99757074da&language=en-US&external_source=imdb_id')
+fetch('https://api.themoviedb.org/3/find/'+ localStorage.getItem("currentImdb")+'?api_key=ada0d47f9e4328dca2b709e48482ff7c&language=en-US&external_source=imdb_id')
 .then((response) => response.json())
 .then((response) =>{
 mp1.src = "https://image.tmdb.org/t/p/w400" +  response.movie_results[0].poster_path
